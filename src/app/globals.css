@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Apple-style smooth animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.3s ease-out;
+}
+
+/* Selection color */
+::selection {
+  background-color: rgba(0, 122, 255, 0.2);
+  color: #007AFF;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
+
+/* Smooth grid transition for accordion */
+.grid-transition {
+  display: grid;
+  transition: grid-template-rows 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.grid-transition.open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+.grid-transition.closed {
+  grid-template-rows: 0fr;
+  opacity: 0;
+}
