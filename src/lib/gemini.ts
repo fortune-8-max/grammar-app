@@ -1,6 +1,6 @@
 "use client";
 
-const GEMINI_MODEL = "gemini-2.5-flash-preview-09-2025";
+const GEMINI_MODEL = "gemini-1.5-flash";
 
 function getApiKey(): string {
   return process.env.NEXT_PUBLIC_GEMINI_API_KEY ?? "";
